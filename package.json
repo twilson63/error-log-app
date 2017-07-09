@@ -7,10 +7,10 @@
   "description": "A simple template to get started with any framework",
   "main": "server.js",
   "scripts": {
-    "start": "serve ."
+    "start": "pushstate-server . 3000"
   },
   "dependencies": {
-    "serve": "^5.2.2"
+    "pushstate-server": "^3.0.0"
   },
   "engines": {
     "node": "8.1.x"

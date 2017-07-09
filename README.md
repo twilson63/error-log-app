@@ -9,11 +9,16 @@ If you have a github account, it would be a good idea to link it to your glitch 
 * [x] Install React
 * [x] Install Redux
 * [x] Install PouchDB
+* [ ] Setup Tachyons 
+
+``` html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.7.4/tachyons.min.css" />
+```
 
 ## Steps
 
 1. [x] List Entries
-2. [ ] Add New Entry
+2. [x] Add New Entry
 3. [ ] Show Entry
 4. [ ] Edit Entry
 5. [ ] Remove Entry
