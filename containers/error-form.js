@@ -4,7 +4,8 @@ import {
   CLEAR_ERROR, 
   ERROR_SET_NAME, 
   ERROR_SET_DESCRIPTION, 
-  ERROR_SET_SOLUTION 
+  ERROR_SET_SOLUTION,
+  SET_ERROR_DOC
 } from '../constants'
 
 import ErrorForm from '../components/error-form'
@@ -19,6 +20,14 @@ const addError = (dispatch, getState) => {
     .then(res => dispatch({type: 'CLEAR_ERROR'}))
     .catch(err => console.log(err))
 }
+
+const getDoc = id => (dispatch) => {
+  db.get(id).then(doc => dispatch({
+    type: SET_ERROR_DOC,
+    payload: doc
+  }))
+}
+
 
 const mapStateToProps = state => {
   return {
@@ -44,6 +53,9 @@ const mapActionsToProps = dispatch => {
       e.preventDefault()
       dispatch(addError)
         .then(res => history.push('/'))
+    },
+    loadDoc: id => {
+      dispatch(getDoc(id))
     }
   }
 }

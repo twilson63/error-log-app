@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { SET_ERROR_DOC, CLEAR_ERROR } from '../constants'
 import PouchDB from 'pouchdb'
 const db = PouchDB('error-log')
+
 const getDoc = id => (dispatch) => {
   db.get(id).then(doc => dispatch({
     type: SET_ERROR_DOC,
@@ -34,6 +35,10 @@ function mapActionsToProps (dispatch) {
     },
     loadDoc: id => {
       dispatch(getDoc(id))
+    },
+    closeDoc: history => {
+      dispatch({ type: CLEAR_ERROR })
+      history.push('/')
     }
   }
 }

@@ -7,7 +7,7 @@ const Form = props => {
     <div>
       <Header title="Add New Error" />
       <main>
-        <ErrorForm history={props.history} />
+        <ErrorForm id={props.match.params.id} history={props.history} />
       </main>
     </div>
   )
