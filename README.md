@@ -7,7 +7,7 @@ If you have a github account, it would be a good idea to link it to your glitch 
 ## Setup
 
 * [x] Install React
-* [ ] Install Redux
+* [x] Install Redux
 * [ ] Install PouchDB
 
 ## Steps
