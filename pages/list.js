@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import R from 'ramda'
 import { List, SimpleListItem, Button } from 'jrs-react-components@2.0.x'
 import Header from '../components/header'
@@ -9,7 +10,7 @@ const li = (err) => {
     <SimpleListItem 
       key={err._id} 
       title={err.name} 
-      link={<Button>Show</Button>} 
+      link={<Link to={`/${err._id}`}><Button>Show</Button></Link>} 
     />
   )
 }
