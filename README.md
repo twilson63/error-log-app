@@ -12,7 +12,7 @@ If you have a github account, it would be a good idea to link it to your glitch 
 
 ## Steps
 
-1. [ ] List Entries
+1. [x] List Entries
 2. [ ] Add New Entry
 3. [ ] Show Entry
 4. [ ] Edit Entry
