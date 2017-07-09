@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import R from 'ramda'
 import { List, SimpleListItem, Button } from 'jrs-react-components@2.0.x'
 import Header from '../components/header'
+import Search from '../containers/search'
 
 const li = (err) => {
   return (
@@ -16,12 +17,23 @@ const li = (err) => {
 }
 
 const Component = props => {
+  const hasCriteria = docs => props.criteria.length > 0
+  const filterDocs = R.filter(doc => R.test(RegExp(`^${props.criteria}`), doc.name))
+
   return (
     <div>
       <Header title={props.title} />
       <main className="pa4">
+        <Search />
         <List className="list">
-          {R.map(li, props.log)}
+          {R.compose(
+            R.map(li),
+            R.ifElse(
+              hasCriteria,
+              filterDocs,
+              R.identity
+            )
+          )(props.log)}
         </List>
       </main>
     </div>
@@ -31,7 +43,8 @@ const Component = props => {
 const mapStateToProps = (state) => {
   return {
     title: state.app.title,
-    log: state.log
+    log: state.log,
+    criteria: state.criteria
   }
 }
     

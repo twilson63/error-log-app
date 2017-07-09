@@ -9,7 +9,7 @@ If you have a github account, it would be a good idea to link it to your glitch 
 * [x] Install React
 * [x] Install Redux
 * [x] Install PouchDB
-* [ ] Setup Tachyons 
+* [x] Setup Tachyons 
 
 ``` html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.7.4/tachyons.min.css" />
@@ -22,4 +22,10 @@ If you have a github account, it would be a good idea to link it to your glitch 
 3. [x] Show Entry
 4. [x] Edit Entry
 5. [x] Remove Entry
-6. [ ] Search Entries
+6. [x] Search Entries
+
+## Advanced
+
+7. [ ] Add Authentication
+8. [ ] Add Remote Database
+9. [ ] Add Ability to add a ScreenShot
