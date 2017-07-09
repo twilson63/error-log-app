@@ -8,7 +8,7 @@ class ErrorShow extends React.Component {
     loadDoc(id)
   }
   render() {
-    const { doc, removeDoc } = this.props
+    const { doc, removeDoc, closeDoc } = this.props
     return (
       <div className="ph2">
         <h1 className="tc">{doc.name}</h1>
@@ -25,7 +25,7 @@ class ErrorShow extends React.Component {
         <div className="tc center bg-light-gray pa1 pt2">
           <Link to={`/${doc._id}/edit`}><Button>Edit</Button></Link>
           <Button onClick={e => removeDoc(this.props.history, doc._id, doc._rev)}>Remove</Button>
-          <Link to="/"><Button>Return</Button></Link>
+          <Button onClick={e => closeDoc(this.props.history)}>Return</Button>
         </div>
       </div>
     )

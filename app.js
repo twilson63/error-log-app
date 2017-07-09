@@ -12,6 +12,7 @@ const App = props => {
         <Switch>
           <Route exact path="/" component={List} />
           <Route path="/new" component={Form} />
+          <Route path="/:id/edit" component={Form} />
           <Route path="/:id" component={Show} />
         </Switch>
       </div>
