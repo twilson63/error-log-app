@@ -9,10 +9,13 @@ import {
   ERROR_SET_NAME, 
   ERROR_SET_DESCRIPTION, 
   ERROR_SET_SOLUTION,
-  SET_ERROR_DOC
+  SET_ERROR_DOC,
+  SET_CRITERIA
 } from './constants'
 
 import PouchDB from 'pouchdb'
+
+
 const SET_LOG = 'SET_LOG'
 const db = PouchDB('error-log')
 
@@ -20,12 +23,22 @@ const store = createStore(
   combineReducers({
     app,
     log,
-    error
+    error,
+    criteria
   }),
   applyMiddleware(thunk)
 )
 
 export default store
+
+function criteria (state='', action) {
+  switch (action.type) {
+    case SET_CRITERIA:
+      return action.payload
+    default:
+      return state
+  }
+}
 
 function error (state={name: ''}, action) {
   switch (action.type) {
@@ -78,6 +91,9 @@ db.changes({live: true, since: 'now'})
         store.dispatch({ type: SET_LOG, payload: pluck('doc', res.rows) })
       })
   })
+
+// create Index
+
 
 // test pouch
 //window.db = db
