@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import { pluck } from 'ramda'
+import R from 'ramda'
+const { pluck }  = R
 
 import PouchDB from 'pouchdb'
 const SET_LOG = 'SET_LOG'
