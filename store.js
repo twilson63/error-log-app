@@ -8,7 +8,8 @@ import {
   CLEAR_ERROR, 
   ERROR_SET_NAME, 
   ERROR_SET_DESCRIPTION, 
-  ERROR_SET_SOLUTION 
+  ERROR_SET_SOLUTION,
+  SET_ERROR_DOC
 } from './constants'
 
 import PouchDB from 'pouchdb'
@@ -28,6 +29,8 @@ export default store
 
 function error (state={name: ''}, action) {
   switch (action.type) {
+    case SET_ERROR_DOC: 
+      return action.payload
     case ERROR_SET_NAME:
       return merge(state, {name: action.payload })
     case ERROR_SET_DESCRIPTION:

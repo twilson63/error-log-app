@@ -19,7 +19,7 @@ If you have a github account, it would be a good idea to link it to your glitch 
 
 1. [x] List Entries
 2. [x] Add New Entry
-3. [ ] Show Entry
+3. [x] Show Entry
 4. [ ] Edit Entry
 5. [ ] Remove Entry
 6. [ ] Search Entries
