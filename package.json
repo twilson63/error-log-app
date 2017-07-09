@@ -1,0 +1,25 @@
+{
+  "//1": "Get Started Template",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "getting-started",
+  "version": "0.0.1",
+  "description": "A simple template to get started with any framework",
+  "main": "server.js",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^5.2.2"
+  },
+  "engines": {
+    "node": "8.1.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/getting-started"
+  },
+  "license": "MIT",
+  "keywords": [
+    "getlibs"
+  ]
+}
