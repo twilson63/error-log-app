@@ -1,22 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { BrowserRouter, Route } from 'react-router-dom'
+import List from './pages/list'
 
 const App = props => {
   return (
-    <div>
-      <header>
-        <h1>{props.title}</h1>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Route exact path="/" component={List} />
+      </div>
+    </BrowserRouter>
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    title: state.app.title
-  }
-}
-
-const connector = connect(mapStateToProps)
-
-export default connector(App)
+export default App
