@@ -96,4 +96,4 @@ db.changes({live: true, since: 'now'})
 
 
 // test pouch
-//window.db = db
+// window.db = db

@@ -26,6 +26,7 @@ If you have a github account, it would be a good idea to link it to your glitch 
 
 ## Advanced
 
-7. [ ] Add Authentication
-8. [ ] Add Remote Database
-9. [ ] Add Ability to add a ScreenShot
+7. [ ] Refactor Data Access layer
+8. [ ] Add Authentication
+9. [ ] Add Remote Database
+10. [ ] Add Ability to add a ScreenShot
